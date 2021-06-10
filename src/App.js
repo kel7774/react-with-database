@@ -35,7 +35,7 @@ function App () {
     setIsLoading(false)
   }, [])
 
-  function addMovieHandler(movie) {
+  async function addMovieHandler(movie) {
     const response = await fetch('https://react-database-cc782-default-rtdb.firebaseio.com/', {
       method: 'POST',
       body: JSON.stringify(movie),
